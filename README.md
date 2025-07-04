@@ -41,6 +41,20 @@
 
 本项目为纯前端工具，无需后端，直接用浏览器打开对应目录下的 `index.html` 文件即可。
 
+### Docker 部署
+
+你也可以通过 Docker 快速部署本项目：
+
+1. 构建镜像：
+   ```bash
+   docker build -t betool .
+   ```
+2. 运行容器：
+   ```bash
+   docker run -d -p 8080:80 --name betool betool
+   ```
+3. 在浏览器访问 [http://localhost:8080](http://localhost:8080)
+
 ---
 
 ## 目录结构
