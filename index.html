@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具集合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            background: white;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 0 30px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .tools-section {
+            padding: 0 40px 40px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        .tool-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 18px 16px;
+            margin-bottom: 0;
+            border: 1.5px solid #e1e5e9;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .tool-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.10);
+        }
+
+        .tool-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tool-icon {
+            width: 26px;
+            height: 26px;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .tool-description {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 18px;
+            font-size: 1em;
+        }
+
+        .tool-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1em;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: auto;
+        }
+        .tool-link:hover {
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 18px rgba(102, 126, 234, 0.18);
+        }
+
+        .tool-features {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="header">
+            <h1>工具集合</h1>
+            <p>简单实用的在线工具，提升工作效率</p>
+        </div>
+         -->
+        <div class="tools-section">
+            <div class="tool-card" onclick="window.open('./bejson/index.html', '_blank')">
+                <div class="tool-title">
+                    <div class="tool-icon">J</div>
+                    JSON 格式化工具
+                </div>
+                <p class="tool-description">
+                    智能格式化、校验和美观展示 JSON 数据。
+                </p>
+                <a href="./bejson/index.html" class="tool-link" target="_blank">立即使用</a>
+            </div>
+            
+            <div class="tool-card" onclick="window.open('./timer/index.html', '_blank')">
+                <div class="tool-title">
+                    <div class="tool-icon">T</div>
+                    时间戳转换工具
+                </div>
+                <p class="tool-description">
+                    秒/毫秒时间戳一键转换，显示当前时间。
+                </p>
+                <a href="./timer/index.html" class="tool-link" target="_blank">立即使用</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

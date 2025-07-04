@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳转换工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="converter-section">
+            <h2>时间戳转日期时间</h2>
+            <div class="input-group">
+                <label for="timestamp">输入时间戳：</label>
+                <input type="text" id="timestamp" placeholder="例如：1640995200 或 1640995200000">
+                <button onclick="convertTimestamp()">转换</button>
+            </div>
+            
+            <div class="result" id="result">
+                <div class="result-item">
+                    <span class="label">转换结果：</span>
+                    <span class="value" id="convertedTime">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">时间戳类型：</span>
+                    <span class="value" id="timestampType">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="converter-section">
+            <h2>当前时间</h2>
+            <div class="current-time" id="currentTime"></div>
+            <div class="current-timestamp">
+                <div class="timestamp-item">
+                    <span class="label">秒级时间戳：</span>
+                    <span class="value" id="currentSeconds">-</span>
+                </div>
+                <div class="timestamp-item">
+                    <span class="label">毫秒级时间戳：</span>
+                    <span class="value" id="currentMilliseconds">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

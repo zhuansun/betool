@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>JSON格式化工具</title>
+</head>
+<body>
+  <div class="container">
+    <!-- 左侧输入区 -->
+    <div class="left-panel">
+      <div class="toolbar">
+        <button id="formatBtn">格式化</button>
+        <button id="removeSpaceBtn">删除空格</button>
+        <button id="removeSpaceEscapeBtn">删除空格并转义</button>
+        <button id="unescapeBtn">去除转义</button>
+      </div>
+      <div id="errorMsg" class="error-msg"></div>
+      <textarea id="jsonInput" placeholder="请输入JSON字符串"></textarea>
+    </div>
+    <div class="drag-bar"></div>
+    <!-- 右侧展示区 -->
+    <div class="right-panel">
+      <div class="toolbar">
+        <button id="expandAllBtn">全部展示</button>
+        <button id="collapseAllBtn">全部折叠</button>
+        <label style="margin-left:12px;user-select:none;font-size:0.98em;display:flex;align-items:center;gap:3px;">
+          <input type="checkbox" id="showCountCheckbox" style="vertical-align:middle;" /> 显示数量
+        </label>
+      </div>
+      <div id="jsonTree" class="json-tree"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
